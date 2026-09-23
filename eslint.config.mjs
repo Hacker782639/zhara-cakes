@@ -12,6 +12,10 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Local agent/skill tooling, not part of the app source:
+    ".agents/**",
+    "design-system/**",
+    "ui-ux-pro-max/**",
   ]),
 ]);
 
