@@ -6,14 +6,25 @@ import { ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { CAKES } from "@/lib/cakes";
 
-const cakes = CAKES.map((cake, index) => ({
-  number: String(index + 1).padStart(2, "0"),
-  title: cake.name,
-  category: cake.category,
-  slug: cake.slug,
-  image: cake.image,
-  alt: cake.alt,
-}));
+const FEATURED_SLUGS = [
+  "the-signature",
+  "chocolate-indulgence",
+  "the-celebration",
+  "birthday-dreams",
+  "sweet-moments",
+  "a-little-surprise",
+];
+
+const cakes = CAKES.filter((cake) => FEATURED_SLUGS.includes(cake.slug)).map(
+  (cake, index) => ({
+    number: String(index + 1).padStart(2, "0"),
+    title: cake.name,
+    category: cake.category,
+    slug: cake.slug,
+    image: cake.image,
+    alt: cake.alt,
+  })
+);
 
 export function CakeCollection() {
   return (
