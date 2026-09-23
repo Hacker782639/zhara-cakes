@@ -12,7 +12,6 @@ const FEATURED_SLUGS = [
   "the-celebration",
   "birthday-dreams",
   "sweet-moments",
-  "a-little-surprise",
 ];
 
 const cakes = CAKES.filter((cake) => FEATURED_SLUGS.includes(cake.slug)).map(
