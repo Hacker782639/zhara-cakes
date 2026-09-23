@@ -12,6 +12,7 @@ const cakes = CAKES.map((cake, index) => ({
   category: cake.category,
   slug: cake.slug,
   image: cake.image,
+  alt: cake.alt,
 }));
 
 export function CakeCollection() {
@@ -52,7 +53,7 @@ export function CakeCollection() {
                 <div className="relative aspect-[4/5] overflow-hidden bg-[#E8DED4]">
                   <Image
                     src={cake.image}
-                    alt={cake.title}
+                    alt={cake.alt}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-105"

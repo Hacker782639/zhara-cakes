@@ -120,7 +120,7 @@ export default async function CakesPage({
                   <div className="relative aspect-[4/5] overflow-hidden bg-[#E8DED4]">
                     <Image
                       src={cake.image}
-                      alt={cake.name}
+                      alt={cake.alt}
                       fill
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       className="object-cover transition-transform duration-700 group-hover:scale-105"

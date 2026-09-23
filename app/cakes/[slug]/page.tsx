@@ -65,7 +65,7 @@ export default async function CakeDetail({ params }: CakeDetailProps) {
             <div className="relative aspect-[4/5] overflow-hidden bg-[#E8DED4]">
               <Image
                 src={cake.image}
-                alt={cake.name}
+                alt={cake.alt}
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 55vw"
